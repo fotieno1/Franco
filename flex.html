@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  background-color: rgb(8, 8, 8);
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  border: 1vw outset ghostwhite;
+  width: 15vw;
+  margin: 0.5vw;
+  text-align: center;
+  line-height: 1vw;
+  font-weight: bold;
+    font: 1.8vw sans-serif;
+    justify-content: center;
+    padding: .1vw .1vw;
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+  }
+  
+  li {
+    float: left;
+    z-index: 9999;
+  }
+  
+  li a, .dropbtn {
+    display: inline-block;
+    font-weight: bold;
+    font: 2vw sans-serif;
+    color: rgb(8, 7, 7);
+    z-index: 9999;
+    text-align: center;
+    padding: .5vw 1.5vw;
+    text-decoration: none;
+  }
+  
+  li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+    z-index: 9999;
+  }
+  
+  li.dropdown {
+    display: inline-block;
+    z-index: 9999;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 99999;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    z-index: 9999;
+    padding: 0.5em 0.5em;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block; 
+    background-color: rgb(151, 148, 148);
+    text-align: center; 
+    z-index: 9999;       
+  }
+a:link {
+  text-decoration: none;
+}
+button {
+  background-color: #0dce27;
+  border: 1vw outset ghostwhite;
+  width: 5vw;
+  margin: 1vw;
+  text-align: center;
+  line-height: 1vw;
+  font-weight: bold;
+  font: 1vw sans-serif;
+  justify-content: center;
+  padding: .1vw .05vw;
+  text-decoration: none;
+  color: black;
+  border: 2px solid #e7e7e7;
+  margin: 0px;
+  padding: 0px;
+}
+a  {
+margin: 0px;
+padding: 0px;
+}
+</style>
+</head>
+<body>
+ <div class="flex-container">
+  
+  <div class="dropdown">
+    <button class="dropbtn">About</button>
+    <div class="dropdown-content">
+      <a href="./HTML/About.html">About</a>
+       
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Home </button>
+    <div class="dropdown-content">
+        <a href="./HTML/Story.html">Story </a>
+        <a href="HTML/Opinion.html">Opinons </a>
+        <a href="./PDF/Resume Francis Otieno web.pdf">CV</a>
+        <a href="./HTML/people.html">Influences</a>
+        <a href="./HTML/Appeal.html">Appeal</a>
+        <a href="./HTML/Visited.html">Visited</a>
+        <a href="./HTML/Credits.html">Credit</a> 
+        <a href="./HTML/Analysis.html">Analysis</a> 
+        <a href="./HTML/Suggestions.html">Suggestions</a> 
+        <a href="./HTML/Caution.html">Caution </a> 
+    </div>
+  </div>
+  
+   
+  <div class="dropdown">
+    <button class="dropbtn">Needs</button>
+    <div class="dropdown-content">
+        <a href="./HTML/Attorney.html">Attorney</a>
+        <a href="./HTML/Technology.html">Technology</a>
+        <a href="./HTML/Financial.html">Financial</a>
+        <a href="./HTML/Consulting.html">Consulting</a>
+        <a href="./HTML/Experts.html">Experts</a>
+        <a href="./HTML/Attention.html">Attention</a>
+    </div>
+  </div> 
+   
+  <div class="dropdown">
+    <button class="dropbtn">Research</button>
+    <div class="dropdown-content">
+        <a href="https://cordex.org">CORDEX</a>
+        <a href="./Images/Africa-CORDEX.jpg">CORDEX Africa</a>
+        <a href="./Images/CORDEX-Antarctica2.jpg">CORDEX Antartica</a>
+        <a href="./Images/TBD.jpg">Hurricanes</a>
+        <a href="./Images/TBD.jpg">Energy</a>
+        <a href="./Images/TBD.jpg">Climate Change</a>  
+    </div>
+  </div>
+   
+  <div class="dropdown">
+    <button class="dropbtn">Hypocrisy</button>
+    <div class="dropdown-content">
+      <a href="./HTML/hypocrisy.html">Hypocrisy</a>
+       
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Injustice</button>
+    <div class="dropdown-content">
+        <a href="./HTML/Rascim.html">Racism </a>
+        <a href="./HTML/police.html">Police </a>
+        <a href="./HTML/Statute.html">Statute of limmitation</a>
+    </div>
+  </div>
+   
+  <div class="dropdown">
+    <button class="dropbtn">USA</button>
+    <div class="dropdown-content">
+        <a href="./HTML/History.html">History </a>
+        <a href="./HTML/Joke.html">Big joke</a>
+        <a href="./HTML/Guns2(1).html">Guns </a>
+        <a href="./HTML/Immigrants.html">Immigrants</a>
+        <a href="./Images/TBD.jpg">Health </a>
+        <a href="./HTML/Budget2(2).html">Budget </a>
+        <a href="./HTML/Inflation.html">Inflation </a>
+        <a href="./HTML/voting.html">Voting</a>    
+        <a href="./HTML/Violence.html">Violence</a>
+        <a href="./HTML/critical.html">Critical Race theory</a>
+        <a href="./HTML/perspective.html">Keep it <span>REAL</span>  </a>
+        <a href="./Images/TBD.jpg">Video</a>
+    </div>
+  </div>
+ 
+<div class="dropdown">
+    <button class="dropbtn">Africa</button>
+    <div class="dropdown-content">
+        <a href="./HTML/Africa2.html">Continent</a>
+        <a href="https://en.wikipedia.org/wiki/Kenya">Kenya </a>
+        <a href="https://en.wikipedia.org/wiki/Siaya">Siaya</a>
+        <a href=" https://en.wikipedia.org/wiki/Nyalenda">Nyalenda</a>
+        <a href="./Images/KSA-DESIGN.jpg">Jamhuri day </a>
+    </div>
+  </div>
+
+    
+</div>
+</body>
+</html>

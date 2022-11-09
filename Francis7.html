@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {     body {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                line-height: 1.5;
+                color: black;
+                background-color: white;
+            }
+          * {
+            box-sizing: border-box;  
+            padding: 0;
+            margin: 0;
+          }
+            .container {
+                height: 100vh;
+                margin: 0px;
+                padding: 0px;  
+                position: relative;
+                display: grid;
+                grid-template-columns: repeat(100,1fr);
+                grid-template-rows: repeat(100,1fr);
+                gap: 1px;
+            }
+        h1 {
+            text-shadow: 2px 2px 5px rgb(92, 79, 79);
+            z-index: 99;
+            font-size: 4vw;
+            padding: 0px;
+            margin: 0px;
+          }
+          h3 {   
+          font-size: 3vw;
+          text-align: center;
+          padding: 0px;
+          margin: 0px;
+        }
+    
+          a:link {
+      text-decoration: none;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+     /*  USA */   
+    
+    .item:nth-of-type(1){ 
+       grid-column: 2/99;
+       grid-row: 2/99;
+       z-index: -9999;
+       position: absolute;
+       text-align: center;          
+       }
+    
+       .USA {
+      height:  100vw;
+    
+    }
+    
+    /*  Francis */
+     .item:nth-of-type(2){
+        border-radius: 25px;
+        grid-column: 10/30;
+        grid-row: 3/8;
+        z-index: 99999;  
+      }
+    .Francis {
+     display: inline;
+     position: absolute;
+     bottom: 31em;
+     left: 2em;
+     max-width: 100%;
+     border-radius: 25px;
+     z-index: 9999;
+         }  
+    /*  Intro */ 
+    .item:nth-of-type(3){
+      grid-column:  32/97;
+      grid-row: 2/3;
+      z-index: 9999;
+      font-size: 3vw; 
+      background-color: lightgrey;
+      border-style: outset;
+      padding-top: 1em;
+      padding-right:1em;
+      padding-bottom: 1em;
+      padding-left:1em;
+      text-align: center;         
+     }
+    /*  Navbar */ 
+    .item:nth-of-type(4){
+      grid-column:  32/99;
+      background-color: rgb(9, 199, 82);
+      grid-row: 4/6;
+      z-index: 99999;
+      position: absolute;
+      }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: black;
+      }
+      
+      li {
+        float: left;
+        z-index: 9999;
+      }
+      
+      li a, .dropbtn {
+        display: inline-block;
+        font-weight: bold;
+        font: 5vw sans-serif;
+        color: white;
+        z-index: 9999;
+        text-align: center;
+        padding: .5vw 1.5vw;
+        text-decoration: none;
+      }
+      
+      li a:hover, .dropdown:hover .dropbtn {
+        background-color: red;
+        z-index: 9999;
+      }
+      
+      li.dropdown {
+        display: inline-block;
+        z-index: 9999;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 99999;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        z-index: 9999;
+        padding: 0.5em 0.5em;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      
+      .dropdown-content a:hover {background-color: #f1f1f1;}
+      
+      .dropdown:hover .dropdown-content {
+        display: block; 
+        background-color: rgb(151, 148, 148);
+        text-align: center; 
+        z-index: 9999;
+                 
+            }
+    
+      /*  Mission */      
+     .item:nth-of-type(5){
+      grid-column: 3/97;
+      grid-row: 20/55;
+      z-index: 99;
+      font-size: 10vw;
+      font-weight: bold;
+      text-shadow: 4px 4px 10px rgb(246, 247, 248);
+      background-color: azure;
+      border-radius: 15px;
+      border-style: outset;
+      padding-top: 0.1vw;
+      padding-right:  0.1vw;
+      padding-bottom: 0.1vw;
+      padding-left: 0.1vw;
+      text-align: center;         
+       }
+    
+    /* Public */
+      .item:nth-of-type(6){
+      grid-column: 8/22;
+      grid-row: 75/95;
+      z-index: 9999;
+      border-style: outset;
+      background-color: darkgrey;
+      text-align: center;
+      padding-top: 0.5vw;
+      padding-right: 0.5vw;
+      padding-bottom: 0.5vw;
+      padding-left: .5vw;
+      text-align: center; 
+     }
+    /* USA February */
+    .item:nth-of-type(7){
+      grid-column: 2/30;
+      grid-row: 60/90;
+      z-index: 9999; 
+      text-align: center; 
+      }
+      .USA-February {
+     display: inline;
+     position: absolute;
+     bottom: 15em;
+     left: 0em;
+     max-width: 100%;
+     z-index: 9999;
+         }   
+      /* Kenya*/
+    .item:nth-of-type(8){
+     grid-column:  36/66;
+     grid-row: 60/80;
+     z-index: 99;  
+     text-align: center; 
+      }
+      /*  Africa */  
+    .item:nth-of-type(9){
+      grid-column: 62/99;
+      grid-row: 60/90;
+      z-index: 99;
+      text-align: center; 
+      }
+    
+    /*  Saying */      
+    .item:nth-of-type(10){
+     grid-column: 2/99;
+     grid-row:94/99;
+     
+     z-index: 9999;     
+     background-color: navy;
+     color: white;
+     display: flex;
+     align-items: center;
+     align-self: center;
+     justify-content: center;
+     font-style: italic;
+     font-size: 5vw;          
+    }
+     /*  Help */ 
+     .item:nth-of-type(11){
+      grid-column: 47/55;
+      grid-row: 85/93;
+      z-index: 99;    
+      display: inline-block;
+      padding: 0.1em 0.1em;
+      font-size: 2em;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+      }}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) { body {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                line-height: 1.5;
+                margin: 1em;
+                color: black;
+                background-color: white;
+            }
+          * {
+            box-sizing: border-box;  
+            padding: 0;
+            margin: 0;
+          }
+            .container {
+                height: 100vh;
+                margin: 0px;
+                padding: 0px;  
+                position: relative;
+                display: grid;
+                grid-template-columns: repeat(100,1fr);
+                grid-template-rows: repeat(100,1fr);
+                gap: 1px;
+            }
+        h1 {
+            text-shadow: 2px 2px 5px rgb(92, 79, 79);
+            z-index: 99;
+            font-size: 4vw;
+            padding: 0px;
+            margin: 0px;
+          }
+          h3 {   
+          font-size: 3vw;
+          text-align: center;
+          padding: 0px;
+          margin: 0px;
+        }
+    
+          a:link {
+      text-decoration: none;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+     /*  USA */   
+    
+    .item:nth-of-type(1){ 
+       grid-column: 2/99;
+       grid-row: 2/99;
+       z-index: -9999;
+       position: absolute;
+       text-align: center;          
+       }
+    
+       .USA {
+      height:  100vw;
+    
+    }
+    
+    /*  Francis */
+     .item:nth-of-type(2){
+        border-radius: 25px;
+        grid-column: 10/30;
+        grid-row: 3/8;
+        z-index: 99999;  
+      }
+    .Francis {
+     display: inline;
+     position: absolute;
+     bottom: 32em;
+     left: 2em;
+     max-width: 100%;
+     border-radius: 25px;
+     z-index: 9999;
+         }  
+    /*  Intro */ 
+    .item:nth-of-type(3){
+      grid-column:  32/97;
+      grid-row: 2/3;
+      z-index: 9999;
+      font-size: 3vw; 
+      background-color: lightgrey;
+      border-style: outset;
+      padding-top: 1em;
+      padding-right:1em;
+      padding-bottom: 1em;
+      padding-left:1em;
+      text-align: center;         
+     }
+    /*  Navbar */ 
+    .item:nth-of-type(4){
+      grid-column:  32/99;
+      background-color: rgb(9, 199, 82);
+      grid-row: 4/6;
+      z-index: 99999;
+       
+      }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: black;
+      }
+      
+      li {
+        float: left;
+        z-index: 9999;
+      }
+      
+      li a, .dropbtn {
+        display: inline-block;
+        font-weight: bold;
+        font: 4vw sans-serif;
+        color: white;
+        z-index: 9999;
+        text-align: center;
+        padding: .5vw 1.5vw;
+        text-decoration: none;
+      }
+      
+      li a:hover, .dropdown:hover .dropbtn {
+        background-color: red;
+        z-index: 9999;
+      }
+      
+      li.dropdown {
+        display: inline-block;
+        z-index: 9999;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 99999;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        z-index: 9999;
+        padding: 0.5em 0.5em;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      
+      .dropdown-content a:hover {background-color: #f1f1f1;}
+      
+      .dropdown:hover .dropdown-content {
+        display: block; 
+        background-color: rgb(151, 148, 148);
+        text-align: center; 
+        z-index: 9999;
+                 
+            }
+    
+      /*  Mission */      
+     .item:nth-of-type(5){
+      grid-column: 32/97;
+      grid-row: 20/55;
+      z-index: 99;
+      font-size: 10vw;
+      font-weight: bold;
+      text-shadow: 4px 4px 10px rgb(246, 247, 248);
+      background-color: azure;
+      border-radius: 15px;
+      border-style: outset;
+      padding-top: 0.1vw;
+      padding-right:  0.1vw;
+      padding-bottom: 0.1vw;
+      padding-left: 0.1vw;
+      text-align: center;         
+       }
+    
+    /* Public */
+      .item:nth-of-type(6){
+      grid-column: 8/22;
+      grid-row: 32/55;
+      z-index: 9999;
+      border-style: outset;
+      background-color: darkgrey;
+      text-align: center;
+      padding-top: 0.5vw;
+      padding-right: 0.5vw;
+      padding-bottom: 0.5vw;
+      padding-left: .5vw;
+      text-align: center; 
+     }
+    /* USA February */
+    .item:nth-of-type(7){
+      grid-column: 2/30;
+      grid-row: 60/90;
+      z-index: 9999; 
+      text-align: center; 
+      }
+      /* Kenya*/
+    .item:nth-of-type(8){
+     grid-column:  36/66;
+     grid-row: 60/80;
+     z-index: 99;  
+     text-align: center; 
+      }
+      /*  Africa */  
+    .item:nth-of-type(9){
+      grid-column: 62/99;
+      grid-row: 60/90;
+      z-index: 99;
+      text-align: center; 
+      }
+    
+    /*  Saying */      
+    .item:nth-of-type(10){
+     grid-column: 2/99;
+     grid-row:94/99;
+     
+     z-index: 9999;     
+     background-color: navy;
+     color: white;
+     display: flex;
+     align-items: center;
+     align-self: center;
+     justify-content: center;
+     font-style: italic;
+     font-size: 5vw;          
+    }
+     /*  Help */ 
+     .item:nth-of-type(11){
+      grid-column: 47/55;
+      grid-row: 85/93;
+      z-index: 99;    
+      display: inline-block;
+      padding: 0.1em 0.1em;
+      font-size: 2em;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+      }}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) { body {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                line-height: 1.5;
+                margin: 1em;
+                color: black;
+                background-color: white;
+            }
+          * {
+            box-sizing: border-box;  
+            padding: 0;
+            margin: 0;
+          }
+            .container {
+                height: 100vh;
+                margin: 0px;
+                padding: 0px;  
+                position: relative;
+                display: grid;
+                grid-template-columns: repeat(100,1fr);
+                grid-template-rows: repeat(100,1fr);
+                gap: 1px;
+            }
+        h1 {
+            text-shadow: 2px 2px 5px rgb(92, 79, 79);
+            z-index: 99;
+            font-size: 4vw;
+            padding: 0px;
+            margin: 0px;
+          }
+          h3 {   
+          font-size: 3vw;
+          text-align: center;
+          padding: 0px;
+          margin: 0px;
+        }
+    
+          a:link {
+      text-decoration: none;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+     /*  USA */   
+    
+    .item:nth-of-type(1){ 
+       grid-column: 2/99;
+       grid-row: 2/99;
+       z-index: -9999;
+       position: absolute;
+       text-align: center;          
+       }
+    
+       .USA {
+      height:  100vw;
+    
+    }
+    
+    /*  Francis */
+     .item:nth-of-type(2){
+        border-radius: 25px;
+        grid-column: 10/30;
+        grid-row: 3/8;
+        z-index: 99999;  
+      }
+    .Francis {
+     display: inline;
+     position: absolute;
+     bottom: 32em;
+     left: 2em;
+     max-width: 100%;
+     border-radius: 25px;
+     z-index: 9999;
+         }  
+    /*  Intro */ 
+    .item:nth-of-type(3){
+      grid-column:  32/97;
+      grid-row: 2/3;
+      z-index: 9999;
+      font-size: 3vw; 
+      background-color: lightgrey;
+      border-style: outset;
+      padding-top: 1em;
+      padding-right:1em;
+      padding-bottom: 1em;
+      padding-left:1em;
+      text-align: center;         
+     }
+    /*  Navbar */ 
+    .item:nth-of-type(4){
+      grid-column:  32/99;
+      background-color: rgb(9, 199, 82);
+      grid-row: 4/6;
+      z-index: 99999;
+       
+      }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: black;
+      }
+      
+      li {
+        float: left;
+        z-index: 9999;
+      }
+      
+      li a, .dropbtn {
+        display: inline-block;
+        font-weight: bold;
+        font: 4vw sans-serif;
+        color: white;
+        z-index: 9999;
+        text-align: center;
+        padding: .5vw 1.5vw;
+        text-decoration: none;
+      }
+      
+      li a:hover, .dropdown:hover .dropbtn {
+        background-color: red;
+        z-index: 9999;
+      }
+      
+      li.dropdown {
+        display: inline-block;
+        z-index: 9999;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 99999;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        z-index: 9999;
+        padding: 0.5em 0.5em;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      
+      .dropdown-content a:hover {background-color: #f1f1f1;}
+      
+      .dropdown:hover .dropdown-content {
+        display: block; 
+        background-color: rgb(151, 148, 148);
+        text-align: center; 
+        z-index: 9999;
+                 
+            }
+    
+      /*  Mission */      
+     .item:nth-of-type(5){
+      grid-column: 32/97;
+      grid-row: 20/55;
+      z-index: 99;
+      font-size: 10vw;
+      font-weight: bold;
+      text-shadow: 4px 4px 10px rgb(246, 247, 248);
+      background-color: azure;
+      border-radius: 15px;
+      border-style: outset;
+      padding-top: 0.1vw;
+      padding-right:  0.1vw;
+      padding-bottom: 0.1vw;
+      padding-left: 0.1vw;
+      text-align: center;         
+       }
+    
+    /* Public */
+      .item:nth-of-type(6){
+      grid-column: 8/22;
+      grid-row: 32/55;
+      z-index: 9999;
+      border-style: outset;
+      background-color: darkgrey;
+      text-align: center;
+      padding-top: 0.5vw;
+      padding-right: 0.5vw;
+      padding-bottom: 0.5vw;
+      padding-left: .5vw;
+      text-align: center; 
+     }
+    /* USA February */
+    .item:nth-of-type(7){
+      grid-column: 2/30;
+      grid-row: 60/90;
+      z-index: 9999; 
+      text-align: center; 
+      }
+      /* Kenya*/
+    .item:nth-of-type(8){
+     grid-column:  36/66;
+     grid-row: 60/80;
+     z-index: 99;  
+     text-align: center; 
+      }
+      /*  Africa */  
+    .item:nth-of-type(9){
+      grid-column: 62/99;
+      grid-row: 60/90;
+      z-index: 99;
+      text-align: center; 
+      }
+    
+    /*  Saying */      
+    .item:nth-of-type(10){
+     grid-column: 2/99;
+     grid-row:94/99;
+     
+     z-index: 9999;     
+     background-color: navy;
+     color: white;
+     display: flex;
+     align-items: center;
+     align-self: center;
+     justify-content: center;
+     font-style: italic;
+     font-size: 5vw;          
+    }
+     /*  Help */ 
+     .item:nth-of-type(11){
+      grid-column: 47/55;
+      grid-row: 85/93;
+      z-index: 99;    
+      display: inline-block;
+      padding: 0.1em 0.1em;
+      font-size: 2em;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+      }}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) { body {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                line-height: 1.5;
+                margin: 1em;
+                color: black;
+                background-color: white;
+            }
+          * {
+            box-sizing: border-box;  
+            padding: 0;
+            margin: 0;
+          }
+            .container {
+                height: 100vh;
+                margin: 0px;
+                padding: 0px;  
+                position: relative;
+                display: grid;
+                grid-template-columns: repeat(100,1fr);
+                grid-template-rows: repeat(100,1fr);
+                gap: 1px;
+            }
+        h1 {
+            text-shadow: 2px 2px 5px rgb(92, 79, 79);
+            z-index: 99;
+            font-size: 4vw;
+            padding: 0px;
+            margin: 0px;
+          }
+          h3 {   
+          font-size: 3vw;
+          text-align: center;
+          padding: 0px;
+          margin: 0px;
+        }
+    
+          a:link {
+      text-decoration: none;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+     /*  USA */   
+    
+    .item:nth-of-type(1){ 
+       grid-column: 2/99;
+       grid-row: 2/99;
+       z-index: -9999;
+       position: absolute;
+       text-align: center;          
+       }
+    
+       .USA {
+      height:  100vw;
+    
+    }
+    
+    /*  Francis */
+     .item:nth-of-type(2){
+        border-radius: 25px;
+        grid-column: 10/30;
+        grid-row: 3/8;
+        z-index: 99999;  
+      }
+    .Francis {
+     display: inline;
+     position: absolute;
+     bottom: 32em;
+     left: 2em;
+     max-width: 100%;
+     border-radius: 25px;
+     z-index: 9999;
+         }  
+    /*  Intro */ 
+    .item:nth-of-type(3){
+      grid-column:  32/97;
+      grid-row: 2/3;
+      z-index: 9999;
+      font-size: 3vw; 
+      background-color: lightgrey;
+      border-style: outset;
+      padding-top: 1em;
+      padding-right:1em;
+      padding-bottom: 1em;
+      padding-left:1em;
+      text-align: center;         
+     }
+    /*  Navbar */ 
+    .item:nth-of-type(4){
+      grid-column:  32/99;
+      background-color: rgb(9, 199, 82);
+      grid-row: 4/6;
+      z-index: 99999;
+       
+      }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: black;
+      }
+      
+      li {
+        float: left;
+        z-index: 9999;
+      }
+      
+      li a, .dropbtn {
+        display: inline-block;
+        font-weight: bold;
+        font: 4vw sans-serif;
+        color: white;
+        z-index: 9999;
+        text-align: center;
+        padding: .5vw 1.5vw;
+        text-decoration: none;
+      }
+      
+      li a:hover, .dropdown:hover .dropbtn {
+        background-color: red;
+        z-index: 9999;
+      }
+      
+      li.dropdown {
+        display: inline-block;
+        z-index: 9999;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 99999;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        z-index: 9999;
+        padding: 0.5em 0.5em;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      
+      .dropdown-content a:hover {background-color: #f1f1f1;}
+      
+      .dropdown:hover .dropdown-content {
+        display: block; 
+        background-color: rgb(151, 148, 148);
+        text-align: center; 
+        z-index: 9999;
+                 
+            }
+    
+      /*  Mission */      
+     .item:nth-of-type(5){
+      grid-column: 32/97;
+      grid-row: 20/55;
+      z-index: 99;
+      font-size: 10vw;
+      font-weight: bold;
+      text-shadow: 4px 4px 10px rgb(246, 247, 248);
+      background-color: azure;
+      border-radius: 15px;
+      border-style: outset;
+      padding-top: 0.1vw;
+      padding-right:  0.1vw;
+      padding-bottom: 0.1vw;
+      padding-left: 0.1vw;
+      text-align: center;         
+       }
+    
+    /* Public */
+      .item:nth-of-type(6){
+      grid-column: 8/22;
+      grid-row: 32/55;
+      z-index: 9999;
+      border-style: outset;
+      background-color: darkgrey;
+      text-align: center;
+      padding-top: 0.5vw;
+      padding-right: 0.5vw;
+      padding-bottom: 0.5vw;
+      padding-left: .5vw;
+      text-align: center; 
+     }
+    /* USA February */
+    .item:nth-of-type(7){
+      grid-column: 2/30;
+      grid-row: 60/90;
+      z-index: 9999; 
+      text-align: center; 
+      }
+      /* Kenya*/
+    .item:nth-of-type(8){
+     grid-column:  36/66;
+     grid-row: 60/80;
+     z-index: 99;  
+     text-align: center; 
+      }
+      /*  Africa */  
+    .item:nth-of-type(9){
+      grid-column: 62/99;
+      grid-row: 60/90;
+      z-index: 99;
+      text-align: center; 
+      }
+    
+    /*  Saying */      
+    .item:nth-of-type(10){
+     grid-column: 2/99;
+     grid-row:94/99;
+     
+     z-index: 9999;     
+     background-color: navy;
+     color: white;
+     display: flex;
+     align-items: center;
+     align-self: center;
+     justify-content: center;
+     font-style: italic;
+     font-size: 5vw;          
+    }
+     /*  Help */ 
+     .item:nth-of-type(11){
+      grid-column: 47/55;
+      grid-row: 85/93;
+      z-index: 99;    
+      display: inline-block;
+      padding: 0.1em 0.1em;
+      font-size: 2em;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+      }}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {  body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: black;
+            background-color: white;
+        }
+      * {
+        box-sizing: border-box;  
+        padding: 0;
+        margin: 0;
+      }
+        .container {
+            height: 100vw;
+            margin: 0px;
+            padding: 0px;  
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(100,1fr);
+            grid-template-rows: repeat(100,1fr);
+            gap: 1px;
+        }
+    h1 {
+        text-shadow: 2px 2px 5px rgb(92, 79, 79);
+        z-index: 99;
+        font-size: 4vw;
+        padding: 0px;
+        margin: 0px;
+      }
+      h3 {   
+      font-size: 1vw;
+      text-align: center;
+      padding: 0px;
+      margin: 0px;
+    }
+
+      a:link {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ /*  USA */   
+
+.item:nth-of-type(1){ 
+   grid-column: 2/99;
+   grid-row: 2/99;
+   z-index: -9999;
+   position: absolute;
+   text-align: center;          
+   }
+
+   .USA {
+  max-width: 100%;
+}
+
+/*  Francis */
+ .item:nth-of-type(2){
+    border-radius: 25px;
+    grid-column: 10/30;
+    grid-row: 3/8;
+    z-index: 9999;  
+  }
+.Francis {
+ display: inline;
+ position: absolute;
+ max-width: 100%;
+ border-radius: 25px;
+ z-index: 9999;
+     }  
+/*  Intro */ 
+.item:nth-of-type(3){
+  grid-column:  32/97;
+  grid-row: 2/3;
+  z-index: 9999;
+  font-size: 3vw; 
+  background-color: lightgrey;
+  border-style: outset;
+  padding-top: 1em;
+  padding-right:1em;
+  padding-bottom: 1em;
+  padding-left:1em;
+  text-align: center;         
+ }
+/*  Navbar */ 
+.item:nth-of-type(4){
+  grid-column:  32/99;
+  grid-row: 4/6;
+  z-index: 9999;
+  position: absolute;
+  }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+  }
+  
+  li {
+    float: left;
+    z-index: 9999;
+  }
+  
+  li a, .dropbtn {
+    display: inline-block;
+    font-weight: bold;
+    font: 1.2vw sans-serif;
+    color: white;
+    z-index: 9999;
+    text-align: center;
+    padding: .5vw 1.5vw;
+    text-decoration: none;
+  }
+  
+  li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+    z-index: 9999;
+  }
+  
+  li.dropdown {
+    display: inline-block;
+    z-index: 9999;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 99999;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    z-index: 9999;
+    padding: 0.5em 0.5em;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block; 
+    background-color: rgb(151, 148, 148);
+    text-align: center; 
+    z-index: 9999;
+             
+        }
+
+  /*  Mission */      
+ .item:nth-of-type(5){
+  grid-column: 32/97;
+  grid-row: 20/55;
+  z-index: 99;
+  font-size: 15vw;
+  text-shadow: 4px 4px 10px rgb(246, 247, 248);
+  background-color: azure;
+  border-radius: 15px;
+  border-style: outset;
+  padding-top: 0.1vw;
+  padding-right:  0.1vw;
+  padding-bottom: 0.1vw;
+  padding-left: 0.1vw;
+  text-align: center;         
+   }
+
+/* Public */
+  .item:nth-of-type(6){
+  grid-column: 10/20;
+  grid-row: 35/55;
+  z-index: 9999;
+  border-style: outset;
+  background-color: darkgrey;
+  text-align: center;
+  padding-top: 0.5vw;
+  padding-right: 0.5vw;
+  padding-bottom: 0.5vw;
+  padding-left: .5vw;
+  text-align: center; 
+ }
+/* USA February */
+.item:nth-of-type(7){
+  grid-column: 2/30;
+  grid-row: 60/90;
+  z-index: 9999; 
+  text-align: center; 
+  }
+  /* Kenya*/
+.item:nth-of-type(8){
+ grid-column:  36/66;
+ grid-row: 60/80;
+ z-index: 99;  
+ text-align: center; 
+  }
+  /*  Africa */  
+.item:nth-of-type(9){
+  grid-column: 62/99;
+  grid-row: 60/90;
+  z-index: 99;
+  text-align: center; 
+  }
+/*  Saying */      
+.item:nth-of-type(10){
+ grid-column: 2/99;
+ grid-row:92/99;
+ z-index: 9999;     
+ background-color: navy;
+ color: white;
+ display: flex;
+ align-items: center;
+ align-self: center;
+ justify-content: center;
+ font-style: italic;
+ font-size: 10vw;          
+}
+ /*  Help */ 
+ .item:nth-of-type(11){
+  grid-column: 47/55;
+  grid-row: 85/93;
+  z-index: 99;    
+  display: inline-block;
+  padding: 0.1em 0.1em;
+  font-size: 2em;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  }}   
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"><img class="USA"   src="./Images/USA-Flag.png" alt="USA"></div>
+        <div class="item"><img class="Francis"  src="Images/Francis.png" alt="Francis" width="100vw" height="100vw"  ></div>
+        <div class="item">WELCOME TO FRANCIS’S WEBSITE</div>
+        <div class="item">
+         <ul> 
+          <li class="dropdown">
+            <a href="./HTML/About.html" class="dropbtn">About</a> 
+            
+          </li>
+             <li class="dropdown">
+               <a href="javascript:void(0)" class="dropbtn">Home </a>
+               <div class="dropdown-content">
+                 <a href="./HTML/Story.html">Story </a>
+                 <a href="HTML/Opinion.html">Opinons </a>
+                 <a href="./PDF/Resume Francis Otieno web.pdf">CV</a>
+                 <a href="./HTML/people.html">Influences</a>
+                 <a href="./HTML/Appeal.html">Appeal</a>
+                 <a href="./HTML/Visited.html">Visited</a>
+                  <a href="./HTML/Credits.html">Credit</a> 
+                  <a href="./HTML/Analysis.html">Analysis</a> 
+                  <a href="./HTML/Suggestions.html">Suggestions</a> 
+                  <a href="./HTML/Caution.html">Caution </a> 
+               </div>
+
+               <li class="dropdown">
+               <a href="javascript:void(0)" class="dropbtn">Needs </a>
+               <div class="dropdown-content">
+                 <a href="./HTML/Attorney.html">Attorney</a>
+                 <a href="./HTML/Technology.html">Technology</a>
+                 <a href="./HTML/Financial.html">Financial</a>
+                 <a href="./HTML/Consulting.html">Consulting</a>
+                 <a href="./HTML/Experts.html">Experts</a>
+                 <a href="./HTML/Attention.html">Attention</a>
+               </div>
+               <li class="dropdown">
+               <a href="javascript:void(0)" class="dropbtn">Research</a> 
+               <div class="dropdown-content">
+                 <a href="https://cordex.org">CORDEX</a>
+                 <a href="./Images/Africa-CORDEX.jpg">CORDEX Africa</a>
+                 <a href="./Images/CORDEX-Antarctica2.jpg">CORDEX Antartica</a>
+                 <a href="./Images/TBD.jpg">Hurricanes</a>
+                 <a href="./Images/TBD.jpg">Energy</a>
+                 <a href="HTML/Climate.html">Climate Change</a>  
+               </div>
+    
+               <li class="dropdown">
+               <a href="javascript:void(0)" class="dropbtn">Injustice</a>
+               <div class="dropdown-content">
+                <a href="./HTML/Rascim.html">Racism </a>
+                <a href="./HTML/police.html">Police </a>
+                <a href="./HTML/Statute.html">Statute of limmitation</a>
+               </div>  
+    
+               <li class="dropdown">
+               <a href="./HTML/hypocrisy.html" class="dropbtn">Hypocrisy</a> 
+             </li>
+    
+         
+                <li class="dropdown">
+                 <a href="javascript:void(0)" class="dropbtn">USA </a>
+                <div class="dropdown-content"> 
+                <a href="./HTML/History.html">History </a>
+                <a href="./HTML/Joke.html">Big joke</a>
+                <a href="./HTML/Guns2(1).html">Guns </a>
+                <a href="./HTML/Immigrants.html">Immigrants</a>
+                <a href="./Images/TBD.jpg">Health </a>
+                <a href="./HTML/Budget2(2).html">Budget </a>
+                <a href="./HTML/Inflation.html">Inflation </a>
+                <a href="./HTML/voting.html">Voting</a>    
+                <a href="./HTML/Violence.html">Violence</a>
+                <a href="./HTML/critical.html">Critical Race theory</a>
+                <a href="./HTML/perspective.html">Keep it <span>REAL</span>  </a>
+                <a href="./Images/TBD.jpg">Video</a>
+                </div> 
+                </li>  
+                           
+                <li class="dropdown">
+                 <a href="javascript:void(0)" class="dropbtn">Africa</a>
+                 <div class="dropdown-content"> 
+                    <a href="./HTML/Africa2.html">Continent</a>
+                     <a href="https://en.wikipedia.org/wiki/Kenya">Kenya </a>
+                    <a href="https://en.wikipedia.org/wiki/Siaya">Siaya</a>
+                    <a href=" https://en.wikipedia.org/wiki/Nyalenda">Nyalenda</a>
+                    <a href="./Images/KSA-DESIGN.jpg">Jamhuri day </a>
+                 </div> 
+              </li>  
+        <div class="item">
+         Exposing <br>Injustices & Hypocrisies
+        </div>
+        <div class="item"><h3>Hypocracy and Injustices <br> in you area <br> TELL THE WORLD</h3> </div>
+        <div class="item">  <img class="USA-February" src="./Images/USA-Feb.png" alt="Columbus"></div>
+        <div class="item"><img src="./Images/Kenya-flag.png" alt="Kenya" width="100vw" ></div>
+        <div class="item"><img class="Africa" src="./Images/Siaya.png" alt="Siaya" height="20vw"> </div>
+        <div class="item">The truth will set you free</div>
+        <div class="item"> <button class="button"><a href="https://www.gofundme.com/f/help-francis-rebuild-his-life?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1">Help</a>    </button></div>
+       
+    </div> 
+</div> 
+</body>
+</html>
